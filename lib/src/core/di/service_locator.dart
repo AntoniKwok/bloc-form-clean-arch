@@ -13,4 +13,14 @@ Future<void> init() async {
 
   locator.registerLazySingleton<NetworkService>(
       () => NetworkService(locator<Dio>()));
+
+  locator.registerLazySingleton<LocationDataSource>(
+      () => LocationDataSource(service: locator<NetworkService>()));
+
+  locator.registerLazySingleton<LocationRepository>(() =>
+      LocationRepositoryImpl(
+          locationDataSource: locator<LocationDataSource>()));
+
+  locator.registerFactory<HomeBloc>(
+      () => HomeBloc(locationRepository: locator<LocationRepository>()));
 }
