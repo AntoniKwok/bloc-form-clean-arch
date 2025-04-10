@@ -20,6 +20,7 @@ the next page.
 
 ## 🏗️ Project Structure
 
+```bash
 lib/
 ├── main.dart
 ├── core/
@@ -61,6 +62,7 @@ lib/
 │ │ └── presentation/
 │ │ │ └── pages/
 │ │ │ │ └── summary_page.dart
+```
 
 ---
 
@@ -101,11 +103,13 @@ lib/
 
 ```bash
 flutter pub get
+```
 
 ### 🔧 Run the App
 
 ```bash
 flutter run
+```
 
 ### 🧪 Run Tests
 
