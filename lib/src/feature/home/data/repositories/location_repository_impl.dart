@@ -1,4 +1,4 @@
-import 'package:sdg/src/feature/home/data/sources/location/location_data_source.dart';
+import 'package:sdg/src/feature/home/data/sources/location_data_source.dart';
 import 'package:sdg/src/feature/home/domain/models/country_data.dart';
 import 'package:sdg/src/feature/home/domain/models/state_data.dart';
 import 'package:sdg/src/feature/home/domain/repositories/location_repository.dart';
