@@ -7,6 +7,8 @@ import 'package:sdg/src/feature/home/presentation/bloc/home_bloc.dart';
 import 'package:sdg/src/feature/home/presentation/data/home_data.dart';
 import 'package:sdg/src/feature/home/presentation/widget/custom_dropdown_widget.dart';
 import 'package:sdg/src/feature/home/presentation/widget/error_view_widget.dart';
+import 'package:sdg/src/feature/summary/data/summary_data.dart';
+import 'package:sdg/src/feature/summary/page/summary_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -89,7 +91,17 @@ class _HomeContent extends StatelessWidget {
                   final selectedState = stateData.selectedState;
 
                   if (selectedCountry != null && selectedState != null) {
-                    // Navigate to Summary Page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SummaryPage(
+                          summaryData: SummaryData(
+                            countryName: selectedCountry.value,
+                            stateName: selectedState.value,
+                          ),
+                        ),
+                      ),
+                    );
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
