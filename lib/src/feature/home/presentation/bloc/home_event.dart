@@ -15,10 +15,3 @@ class SelectStateEvent extends HomeEvent {
 
   SelectStateEvent({required this.stateId});
 }
-
-class SubmitSelectionEvent extends HomeEvent {
-  final CountryData country;
-  final StateData state;
-
-  SubmitSelectionEvent({required this.country, required this.state});
-}
